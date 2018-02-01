@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # 追記（cloud9用の設定）
+  template: template0
+
+development:
+  <<: *default
+  database: chatter_development
+
+test:
+  <<: *default
+  database: chatter_test
+
+production:
+  <<: *default
+  database: chatter_production
+  username: chatter
+  password: <%= ENV['CHATTER_DATABASE_PASSWORD'] %>
