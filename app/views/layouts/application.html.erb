@@ -3,12 +3,37 @@
   <head>
     <title>Chatter</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+
+    <!-- header -->
+    <header class="header">
+      <div class="top_menu clearfix">
+        <ul>
+          <li><a class="top_menu" href="/">Home</a></li>
+          <li><a class="top_menu" href="/messages">つぶやき一覧</a></li>
+          <li><a class="top_menu" href="/messages/new">新規投稿</a></li>
+        </ul>
+      </div>
+    </header>
+
+  <%= yield %>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>Copyright © 2017年10月生 下村浩一 All RIGHTS RESERVED.</p>
+    </footer>
+
+  <!-- end container -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
   </body>
 </html>

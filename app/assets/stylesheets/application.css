@@ -13,3 +13,191 @@
  *= require_tree .
  *= require_self
  */
+
+/* ########## 共通パーツ ############## */
+
+html {
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+.container{
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+/* ヘッダー */
+
+.header{
+  background-color: #66cc00;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+.top_menu li{
+  float: left;
+  width: auto;
+}
+
+.top_menu li a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+.top_menu li a:hover{
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* フッター */
+
+.footer{
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  background-color: #4D4D4D;
+  display: table;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* noticeメッセージ用 */
+
+#error_explanation {
+  text-align: center;
+}
+
+.notice{
+  color: #4169e1;  
+}
+
+/* エラーメッセージ用 */
+
+#error_explanation {
+  color: #ff0000;
+}
+
+/* ########## トップ画面 ############## */
+
+.top_img {
+  position: relative;
+  }
+
+.top_img p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 80px;
+  color: #ffffff;
+  }
+
+.top_img img {
+  width: 100%;
+  }
+
+/* ########## 一覧画面 ############## */
+
+table td {
+  word-break : break-all;
+}
+
+/* リンクをボタンに変更する */
+a.action_edit {
+  font-size:0.75em;
+  display:block;
+  width:100px;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align:center;
+  border:2px solid;
+  border-color:#aaaaaa #444444 #444444 #aaaaaa;
+  background:#4169e1;
+  text-decoration: none;
+  color: #fff;
+}
+
+a.action_edit:hover{
+  background:#191970;
+}
+
+a.action_delete {
+  font-size:0.75em;
+  display:block;
+  width:100px;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align:center;
+  border:2px solid;
+  border-color:#aaaaaa #444444 #444444 #aaaaaa;
+  background:#ff69b4;
+  text-decoration: none;
+  color: #fff;
+}
+
+a.action_delete:hover{
+  background:#ff1493;
+}
+
+/* ########## 新規投稿・確認画面 ############## */
+
+
+/* input用ボタン */
+
+.message_content {
+  text-align: center;
+}
+
+.square_btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin: 10px 0px;
+}
+
+.square_btn:active {/*ボタンを押したとき*/
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}

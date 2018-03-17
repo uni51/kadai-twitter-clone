@@ -1,0 +1,15 @@
+<h1>つぶやき一覧</h2>
+
+<p class="notice"><%= notice %></p>
+
+<table>
+<% @messages.each do |message| %>
+  <tr>
+    <td colspan="2"><%= message.content %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "編集", edit_message_path(message.id), :class => 'action_edit' %></td>
+    <td align="right"><%= link_to "削除", message_path(message.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, :class => 'action_delete' %></td>
+  </tr>
+<% end %>
+</table>

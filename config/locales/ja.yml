@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    models:
+      message: 投稿
+    attributes:
+      message:
+        content: つぶやき
