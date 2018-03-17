@@ -133,6 +133,9 @@ h1 {
   }
 
 /* ########## 一覧画面 ############## */
+table{
+  width: 100%;
+}
 
 table td {
   word-break : break-all;
